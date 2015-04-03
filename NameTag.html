@@ -48,7 +48,13 @@
     <script>
         $(function() {
             $('.btn_name').click(function () {
-                var nameIn = $("#inText").val();
+                var nameIn = $("#inText").val().trim();
+                    if(!nameIn){
+                    alert('Enter Your Name')
+                    return
+                }
+
+                
                 $('.iName').append(nameIn);
                 $('.smallRect').hide();
                 console.log(nameIn);
